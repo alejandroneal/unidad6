@@ -11,9 +11,11 @@ package ejer1;
 public class Corredera extends Ventana {
 
     private int numero;
+    private Persiana persiana;
     
     public Corredera(boolean abierta, Persiana persiana, int numero) {
-        super(abierta, persiana);
+        super(abierta);
+        this.persiana = persiana;
         this.numero = numero;
     }
 

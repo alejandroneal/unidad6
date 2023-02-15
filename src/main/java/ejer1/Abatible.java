@@ -12,8 +12,8 @@ public class Abatible extends Ventana {
     
     private int numero;
 
-    public Abatible(int numero, boolean abierta, Persiana persiana) {
-        super(abierta, persiana);
+    public Abatible(int numero, boolean abierta) {
+        super(abierta);
         this.numero = numero;
     }
 

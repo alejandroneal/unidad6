@@ -4,6 +4,9 @@
  */
 package ejer1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author alejandro
@@ -11,22 +14,45 @@ package ejer1;
 public class Casa {
     
     private Puerta puerta;
-    private Calefactor calefactor;
-    private Ventana ventana;
+    private List<Calefactor> listaCalefactor;
+    private List<Ventana> listaVentanas;
+    private double metrosCuadrados;
 
     public Casa() {
     }
 
-    public Casa(Puerta puerta, Calefactor calefactor, Ventana ventana) {
+    public Casa(Puerta puerta, double metrosCuadrados) {
         this.puerta = puerta;
-        this.calefactor = calefactor;
-        this.ventana = ventana;
+        this.metrosCuadrados = metrosCuadrados;
+        this.listaVentanas = new ArrayList<>();
+        this.listaCalefactor = new ArrayList<>();
+    }
+
+    public Puerta getPuerta() {
+        return puerta;
+    }
+
+    public void setPuerta(Puerta puerta) {
+        this.puerta = puerta;
+    }
+
+    public double getMetrosCuadrados() {
+        return metrosCuadrados;
+    }
+
+    public void setMetrosCuadrados(double metrosCuadrados) {
+        this.metrosCuadrados = metrosCuadrados;
     }
 
     @Override
     public String toString() {
-        return "Casa{" + "puerta=" + puerta + ", calefactor=" + calefactor + ", ventana=" + ventana + '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append("Casa{");
+        sb.append("puerta=").append(puerta);
+        sb.append(", listaCalefactor=").append(listaCalefactor.toString());
+        sb.append(", listaVentanas=").append(listaVentanas.toString());
+        sb.append(", metrosCuadrados=").append(metrosCuadrados);
+        sb.append('}');
+        return sb.toString();
     }
-    
-    
 }

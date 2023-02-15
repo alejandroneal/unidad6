@@ -11,19 +11,17 @@ package ejer1;
 public class Ventana {
     
     private boolean abierta;
-    private Persiana persiana;
 
     public Ventana() {
     }
 
-    public Ventana(boolean abierta, Persiana persiana) {
+    public Ventana(boolean abierta) {
         this.abierta = abierta;
-        this.persiana = persiana;
     }
 
     @Override
     public String toString() {
-        return "Ventana{" + "abierta=" + abierta + ", persiana=" + persiana + '}';
+        return "Ventana{" + "abierta=" + abierta + '}';
     }
     
     public void abrir(){
@@ -41,14 +39,4 @@ public class Ventana {
     public void setAbierta(boolean abierta) {
         this.abierta = abierta;
     }
-
-    public Persiana getPersiana() {
-        return persiana;
-    }
-
-    public void setPersiana(Persiana persiana) {
-        this.persiana = persiana;
-    }
-    
-    
 }
