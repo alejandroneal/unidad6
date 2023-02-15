@@ -59,6 +59,6 @@ public class Persona implements Comparable<Persona>{
 
     @Override
     public int compareTo(Persona o) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return this.nif.compareToIgnoreCase(o.nif);
     }
 }
