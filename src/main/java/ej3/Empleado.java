@@ -8,7 +8,7 @@ package ej3;
  *
  * @author alejandro
  */
-public class Empleado extends Persona {
+public abstract class Empleado extends Persona {
     private double salario;
 
     public double getSalario() {
@@ -33,7 +33,5 @@ public class Empleado extends Persona {
        return tmp + " " + this.salario;
     }
     
-    public void aumentarSalario(double n){
-        this.salario += n;
-    }
+    public abstract void aumentarSalario(double n);
 }

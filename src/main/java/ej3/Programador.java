@@ -33,6 +33,11 @@ public class Programador extends Empleado {
         String tmp = super.toString();
         return tmp + " " + this.categoría;
     }
+
+    @Override
+    public void aumentarSalario(double n) {
+         this.setSalario(this.getSalario() + (n * 0.8));
+    }
     
     
 }
