@@ -13,12 +13,11 @@ public class Persona {
     private String nombre;
     private String apellidos;
     private String nif;
-    private static int contador = 0;
 
     public Persona(String nombre, String apellidos, String nif) {
         this.nombre = nombre;
         this.apellidos = apellidos;
-        this.nif = String.valueOf(++contador);
+        this.nif = nif;
     }
 
     public Persona() {

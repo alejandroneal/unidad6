@@ -34,10 +34,8 @@ public class CuentaAhorro extends Cuenta {
     public void retirarSaldo(double cantidad) {
         if ((getSaldo() - cantidad) < 0) {
             setSaldo(0);
-            actualizarSaldo();
         } else {
             setSaldo(getSaldo() - cantidad);
-            actualizarSaldo();
         }
     }
 
@@ -61,15 +59,15 @@ public class CuentaAhorro extends Cuenta {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("CuentaCorriente{");
-        sb.append("comision anual=").append(comisionAnual);
-        sb.append("interes variable=").append(interes);
-        sb.append("número de cuenta=").append(getNumeroCuenta());
-        sb.append("saldo=").append(getSaldo());
-        sb.append("Persona=");
+        sb.append("\ncomision anual=").append(comisionAnual);
+        sb.append("\ninteres variable=").append(interes);
+        sb.append("\nnúmero de cuenta=").append(getNumeroCuenta());
+        sb.append("\nsaldo=").append(getSaldo());
+        sb.append("\nPersona=");
         sb.append("nif=").append(super.getCliente().getNif());
         sb.append("nombre=").append(super.getCliente().getNombre());
         sb.append("apellidos=").append(super.getCliente().getApellidos());
-        sb.append('}');
+        sb.append("\n}");
         return sb.toString();
     }
 }

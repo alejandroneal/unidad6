@@ -38,7 +38,6 @@ public class CuentaCorriente extends Cuenta {
     public void retirarSaldo(double cantidad) {
         if ((getSaldo() - cantidad) > saldoMinimo) {
             setSaldo(getSaldo() - cantidad);
-            actualizarSaldo();
         }
     }
 
@@ -54,14 +53,14 @@ public class CuentaCorriente extends Cuenta {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("CuentaCorriente{");
-        sb.append("saldoMinimo=").append(saldoMinimo);
-        sb.append("número de cuenta=").append(getNumeroCuenta());
-        sb.append("saldo=").append(getSaldo());
-        sb.append("Persona=");
+        sb.append("\nsaldoMinimo=").append(saldoMinimo);
+        sb.append("\nnúmero de cuenta=").append(getNumeroCuenta());
+        sb.append("\nsaldo=").append(getSaldo());
+        sb.append("\nPersona=");
         sb.append("nif=").append(super.getCliente().getNif());
         sb.append("nombre=").append(super.getCliente().getNombre());
         sb.append("apellidos=").append(super.getCliente().getApellidos());
-        sb.append('}');
+        sb.append("\n}");
         return sb.toString();
     }
 }
