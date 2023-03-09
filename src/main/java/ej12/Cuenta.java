@@ -4,6 +4,8 @@
  */
 package ej12;
 
+import java.util.HashSet;
+import java.util.Set;
 import org.apache.commons.lang3.RandomStringUtils;
 
 /**
@@ -19,9 +21,24 @@ public abstract class Cuenta {
     }
 
     public Cuenta(Persona cliente) {
-        this.numeroCuenta = RandomStringUtils.randomNumeric(20);
+        this.numeroCuenta = numeroCuentaAle();
         this.saldo = 0;
         this.cliente = cliente;
+    }
+    
+    private String numeroCuentaAle(){
+        Set<String> generados =  new HashSet<>();
+        boolean repetir = false;
+        String resultado = "";
+        while (!repetir){
+            String numeroAux = RandomStringUtils.randomNumeric(20);
+            if (!generados.contains(numeroAux)) {
+                generados.add(numeroAux);
+                resultado = numeroAux;
+                repetir = true;
+            }
+        }
+        return resultado;
     }
 
     public String getNumeroCuenta() {

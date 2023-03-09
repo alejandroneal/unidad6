@@ -35,11 +35,15 @@ public class Main {
         for (Cuenta c : cuentas) {
             System.out.println(c.toString());
             System.out.println("");
-//            if (c instanceof CuentaAhorro) {
-//                c.toString();
-//            } else if (c instanceof CuentaCorriente) {
-//                c.toString();
-//            }
+            if (c instanceof CuentaAhorro) {
+                c.setSaldo(1500);
+                c.actualizarSaldo();
+                System.out.println(c.getSaldo());
+            } else if (c instanceof CuentaCorriente) {
+                c.setSaldo(1780);
+                c.actualizarSaldo();
+                System.out.println(c.getSaldo());
+            }
         }
     }
 }
