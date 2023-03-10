@@ -10,10 +10,10 @@ package ej12;
  */
 public class CuentaCorriente extends Cuenta {
 
-    private static double interes = 1.5;
+    private final static double INTERES = 1.5;
 
     public static double getInteres() {
-        return interes;
+        return INTERES;
     }
     private double saldoMinimo;
     
@@ -28,9 +28,9 @@ public class CuentaCorriente extends Cuenta {
     @Override
     public void actualizarSaldo() {
         if (getSaldo() > 1000) {
-            setSaldo(getSaldo() + (saldoMinimo*interes));
+            setSaldo(getSaldo() + (saldoMinimo*INTERES));
         } else {
-            setSaldo(getSaldo() + (getSaldo() + interes));
+            setSaldo(getSaldo() + (getSaldo() + INTERES));
         }
     }
 

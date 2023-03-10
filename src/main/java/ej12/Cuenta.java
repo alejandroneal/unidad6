@@ -65,6 +65,10 @@ public abstract class Cuenta {
         this.cliente = cliente;
     }
     
+    public void ingresar(double cantidad){
+        setSaldo(getSaldo() + cantidad);
+    }
+    
     public abstract void actualizarSaldo();
     
     public abstract void retirarSaldo(double cantidad);
