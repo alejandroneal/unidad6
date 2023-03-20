@@ -12,11 +12,9 @@ public final class Temperatura extends Sensor {
     
     public final double MAX_TMP = 22; //Cº
     public final double MIN_TMP = 10; //Cº
-    private double temperaturaSala;
 
-    public Temperatura(double temperaturaSala, int id) {
+    public Temperatura(int id) {
         super(id);
-        this.temperaturaSala = temperaturaSala;
     }
 
     public double getMAX_TMP() {
@@ -27,20 +25,11 @@ public final class Temperatura extends Sensor {
         return MIN_TMP;
     }
 
-    public double getTemperaturaSala() {
-        return temperaturaSala;
-    }
-
     @Override
-    public String toString() {
-        return "Temperatura{" + "la temperatura de la sala es de " + temperaturaSala + "ºC" +  '}';
-    }
-
-    @Override
-    public void alarma() {
-        if (this.temperaturaSala < this.MIN_TMP) {
+    public void alarma(double temperaturaSala) {
+        if (temperaturaSala < this.MIN_TMP) {
             System.out.println("¡ALARMA! LA TEMPERATURA ES DEMASIADO BAJA");
-        } else if (this.temperaturaSala > this.MAX_TMP) {
+        } else if (temperaturaSala > this.MAX_TMP) {
             System.out.println("¡ALARMA! LA TEMPERATURA ES DEMASIADO ALTA");
         } else {
             System.out.println("La temperatura está dentro de los parámetros");

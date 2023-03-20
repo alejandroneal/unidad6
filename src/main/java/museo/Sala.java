@@ -13,12 +13,14 @@ import java.util.List;
 public abstract class Sala {
     
     private List<Obra> obras;
-    private List<Sensor> alarmas;
+    private Sensor sensorTemp;
+    private Sensor sensorHum;
     private int id;
 
-    public Sala(List<Obra> obras, List<Sensor> alarmas, int id) {
+    public Sala(List<Obra> obras, Temperatura sensorTemp, Humedad sensorHum, int id) {
         this.obras = obras;
-        this.alarmas = alarmas;
+        this.sensorTemp = sensorTemp;
+        this.sensorHum = sensorHum;
         this.id = id;
     }
 
@@ -26,8 +28,12 @@ public abstract class Sala {
         return obras;
     }
 
-    public List<Sensor> getAlarmas() {
-        return alarmas;
+    public Sensor getSensorTemp() {
+        return sensorTemp;
+    }
+
+    public Sensor getSensorHum() {
+        return sensorHum;
     }
 
     public int getId() {

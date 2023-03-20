@@ -8,11 +8,11 @@ package museo;
  *
  * @author Alejandro
  */
-public final class Cuadro extends Obra {
+public final class Pintura extends Obra {
     
     private String estilo;
 
-    public Cuadro(String estilo, int id, String autor) {
+    public Pintura(String estilo, int id, String autor) {
         super(id, autor);
         this.estilo = estilo;
     }

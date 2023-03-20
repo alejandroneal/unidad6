@@ -12,19 +12,19 @@ import java.util.List;
  */
 public final class Fija extends Sala{
     
-    private boolean estado;
+    private boolean disponible;
 
-    public Fija(boolean estado, List<Obra> obras, List<Sensor> alarmas, int id) {
-        super(obras, alarmas, id);
-        this.estado = estado;
+    public Fija(boolean estado, List<Obra> obras, Temperatura sensorTemp, Humedad sensorHum, int id) {
+        super(obras, sensorTemp, sensorHum, id);
+        this.disponible = estado;
     }
 
     public boolean isEstado() {
-        return estado;
+        return disponible;
     }
 
     @Override
     public String toString() {
-        return "Sala fija{id=" + getId() + "estado=" + estado + '}';
+        return "Sala fija{id=" + getId() + "estado=" + disponible + '}';
     }
 }

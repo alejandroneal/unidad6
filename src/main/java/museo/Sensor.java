@@ -42,5 +42,5 @@ public abstract class Sensor {
         return this.id == other.id;
     }
     
-    public abstract void alarma();
+    public abstract void alarma(double medida);
 }

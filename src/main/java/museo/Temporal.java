@@ -16,8 +16,8 @@ public final class Temporal extends Sala {
     private LocalDate fechaInicio;
     private LocalDate fechaFin;
 
-    public Temporal(LocalDate fechaInicio, LocalDate fechaFin, List<Obra> obras, List<Sensor> alarmas, int id) {
-        super(obras, alarmas, id);
+    public Temporal(LocalDate fechaInicio, LocalDate fechaFin, List<Obra> obras, Temperatura sensorTemp, Humedad sensorHum, int id) {
+        super(obras, sensorTemp, sensorHum, id);
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
     }
